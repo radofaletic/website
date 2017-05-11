@@ -1,0 +1,27 @@
+<?php
+$title = 'Rado’s homepage';
+require_once('includes/config.inc.php');
+include_once('includes/header.inc.php');
+?>
+
+<p>I have a <abbr title="Doctor of Philosophy">PhD</abbr> from <a href="http://www.anu.edu.au/">The Australian National University</a>. This project involved developing software for the tomography of shock layer flows. I previously completed a Bachelor of Science with Honours at the <a href="http://rses.anu.edu.au/">Research School of Earth Sciences</a> in seismic tomography.</p>
+
+<p>My current activities include being Director, Projects &amp; Communications at <a href="http://www.montroix.com/">Montroix Pty Ltd</a>.</p>
+
+<section id="twitter" class="row">
+	<div class="col-md-6 text-center"><a id="twitter_RadoFaletic" class="twitter-timeline" href="http://twitter.com/RadoFaletic" data-widget-id="256332548853075968">Tweets by @RadoFaletic</a></div>
+	<div class="col-md-6 text-center"><a id="twitter_Montroix" class="twitter-timeline" href="http://twitter.com/Montroix" data-widget-id="255842372548694016">Tweets by @Montroix</a></div>
+	<script type="text/javascript">
+		var twitter_RadoFaletic = document.getElementById('twitter_RadoFaletic');
+		twitter_RadoFaletic.setAttribute('width', 300);
+		twitter_RadoFaletic.setAttribute('height', 450);
+		var twitter_Montroix = document.getElementById('twitter_Montroix');
+		twitter_Montroix.setAttribute('width', 300);
+		twitter_Montroix.setAttribute('height', 450);
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	</script>
+</section>
+
+<?php
+include_once('includes/footer.inc.php');
+?>
