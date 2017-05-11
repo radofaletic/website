@@ -1,8 +1,8 @@
 # README #
 
-version 1.0
+version 2.0
 
-This PHP code is for Rado Faletič’s website
+This Node.js code is for Rado Faletič’s website
 
 ### Further information ###
 

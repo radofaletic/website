@@ -1,0 +1,12 @@
+{
+  "name": "radofaletic.com",
+  "version": "1.0.0",
+  "description": "Rado Faletič’s website",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js"
+  },
+  "author": "Rado Faletič",
+  "license": "UNLICENSED",
+  "dependencies": {}
+}

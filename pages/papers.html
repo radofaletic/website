@@ -1,16 +1,11 @@
-<?php
-$title = 'Rado’s publications';
-require_once('includes/config.inc.php');
-include_once('includes/header.inc.php');
-?>
 
 <p>You can find me on ORCID at <a href="http://orcid.org/0000-0002-3971-0531">orcid.org/0000-0002-3971-0531</a>.</p>
 
 <dl class="dl-horizontal">
 	<dt>2016</dt>
 	<dd><ul>
-		<li>Caroline Moss, Nick Mulhernand, Andrew Cherry, Rado Faletič, Martin Grabert, Cynthia Cripps &amp; Jane Lattimore. <a href="http://plus.pacenet.eu/system/files/documents/PNP_D5.1_Brief on recommendations for enhanced bi-regional partnerships_final.pdf">Understanding and promoting <abbr title="Horizon 2020">H2020</abbr> and other <abbr title="European Union">EU</abbr> programmes</span> programmes</a>. September 2016.</li>
-		<li><a href="http://plus.pacenet.eu/system/files/documents/PNP Towards a Pacific STI Agenda v4.pdf">Towards a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Agenda: a <abbr title="Pacific-Europe Network for Science, Technology and Innovation">PACE-Net Plus</abbr> recommendation to foster science, technology and innovation (<abbr title="science, technology and innovation">ST&amp;I</abbr>) pathways in the Pacific region</a>. July 2016.</li>
+		<li>Caroline Moss, Nick Mulhernand, Andrew Cherry, Rado Faletič, Martin Grabert, Cynthia Cripps &amp; Jane Lattimore. <a href="http://plus.pacenet.eu/system/files/documents/PNP_D5.1_Brief%20on%20recommendations%20for%20enhanced%20bi-regional%20partnerships_final.pdf">Understanding and promoting <abbr title="Horizon 2020">H2020</abbr> and other <abbr title="European Union">EU</abbr> programmes</a>. September 2016.</li>
+		<li><a href="http://plus.pacenet.eu/system/files/documents/PNP%20Towards%20a%20Pacific%20STI%20Agenda%20v4.pdf">Towards a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Agenda: a <abbr title="Pacific-Europe Network for Science, Technology and Innovation">PACE-Net Plus</abbr> recommendation to foster science, technology and innovation (<abbr title="science, technology and innovation">ST&amp;I</abbr>) pathways in the Pacific region</a>. July 2016.</li>
 	</ul></dd>
 	
 	<dt>2015</dt>
@@ -84,42 +79,3 @@ include_once('includes/header.inc.php');
 		<li>Rado Faletič. Spatial patterns of overland flow on disturbed hillslopes, Technical Report, <a href="http://www.catchment.crc.org.au"><abbr title="Cooperative Research Centre">CRC</abbr> for Catchment Hydrology</a>, 21 February 1997.</li>
 	</ul></dd>
 </dl>
-
-<?php
-/*
-$orcid_clientId = 'APP-S033ZXS6P4ESHWB6';
-$orcid_clientSecret = '63abb0d2-1376-4b2c-8af7-55d53dbc1104';
-$orcid_userId = '0000-0002-3971-0531';
-$orcid = curl_init();
-curl_setopt($orcid, CURLOPT_URL, 'http://pub.orcid.org/oauth/token');
-//curl_setopt($orcid, CURLOPT_HEADER, true);
-curl_setopt($orcid, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($orcid, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($orcid, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-curl_setopt($orcid, CURLOPT_POSTFIELDS, 'client_id=' . $orcid_clientId . '&client_secret=' . $orcid_clientSecret . '&scope=/read-public&grant_type=client_credentials');
-$token = curl_exec($orcid);
-curl_close($orcid);
-
-$publications = false;
-if ($token !== false) {
-	$token = json_decode($token);
-	if (isset($token->access_token) && $token->access_token) {
-		$token = $token->access_token;
-		$orcid = curl_init();
-		curl_setopt($orcid, CURLOPT_URL, 'http://pub.orcid.org/v1.2/' . $orcid_userId . '/orcid-works');
-		curl_setopt($orcid, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($orcid, CURLOPT_HTTPHEADER, array('Content-Type: text/html', 'Authorization: Bearer ' . $token));
-		$publications = curl_exec($orcid);
-		curl_close($orcid);
-	}
-}
-
-if ($publications) {
-	echo $publications;
-}
-*/
-?>
-
-<?php
-include_once('includes/footer.inc.php');
-?>
