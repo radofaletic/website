@@ -2,7 +2,7 @@
 
 version 2.0
 
-This Node.js code is for Rado Faletič’s website
+This Node.js code is for Rado Faletič’s website, http://RadoFaletic.com/
 
 ### Further information ###
 
