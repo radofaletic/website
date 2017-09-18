@@ -1,8 +1,8 @@
 # README #
 
-version 2.0
+version 3.0
 
-This Node.js code is for Rado Faletič’s website, http://RadoFaletic.com/
+This HTML/CSS Bootstrap 4 code is for Rado Faletič’s website, http://RadoFaletic.com/
 
 ### Further information ###
 
