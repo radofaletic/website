@@ -9,34 +9,14 @@
 	<title>Rado Faletič</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<style type="text/css">
-		body {
-			background-color: #acbecc;
-			background-image: url(grey.png);
-			background-position: center top;
-			background-size: auto;
-			background-repeat: repeat;
-			background-attachment: fixed;
-		}
-		a:link, a:visited {
-			color: navy;
-		}
-		a:hover {
-			color: teal;
-		}
-		a:active {
-			color: red;
-			text-decoration: underline;
-		}
-		a.url {
-			font-style: italic;
-		}
-		.carousel img {
-			max-width: 210px;
-			max-height: 210px;
-		}
-		@media print {
-			abbr::after { display: none; } 
-		}
+		body { background: #acbecc url(grey.png) center top repeat fixed; }
+		a:link, a:visited { color: navy; }
+		a:hover { color: teal; }
+		a:active { color: red; text-decoration: underline; }
+		a.url { font-style: italic; }
+		abbr[title] { text-decoration: initial; }
+		.carousel img { max-width: 210px; max-height: 210px; }
+		@media print { abbr::after { display: none; }  }
 	</style>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49242266-3"></script>
 	<script>
@@ -401,7 +381,7 @@
 					
 					<section>
 						<h2>Contact details</h2>
-						<p>see my <a href="#contact" onclick="showMenuItem('contact')">contact details</a> page</p>
+						<p>see my <a href="#contact">contact details</a> page</p>
 					</section>
 					
 					<section>
@@ -418,7 +398,7 @@
 					
 					<section>
 						<h2>Publications</h2>
-						<p><em>see my <a href="#papers" onclick="showMenuItem('papers')">publications</a> page</em></p>
+						<p><em>see my <a href="#papers">publications</a> page</em></p>
 					</section>
 					
 					<section>
@@ -499,12 +479,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script>
-		function showMenuItem(item) {
-			$('#nav-tabs a[href="#' + item + '"]').tab('show');
-		}
 		$(document).ready(function() {
+			$('#nav-tabsContent a[href^="#"]').click(function(event) {
+				event.preventDefault();
+				$('#nav-tabs a[href="#' + $(this).attr('href').substring(1) + '"]').tab('show')
+			});
 			if (window.location.hash) {
-				showMenuItem(window.location.hash.substring(1));
+				$('#nav-tabs a[href="#' + window.location.hash.substring(1) + '"]').tab('show');
 			}
 		});
 	</script>
