@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>https://radofaletic.com/</loc>
+		<lastmod>2018-04-10T09:30:39+10:00</lastmod>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://radofaletic.com/documents/1997-11_Faletic_Seismic_Tomography_honours_thesis.pdf</loc>
+		<lastmod>1997-11-14T09:11:12+11:00</lastmod>
+		<priority>0.25</priority>
+	</url>
+	<url>
+		<loc>https://radofaletic.com/documents/1997-02-21_Faletic_Spatial_patterns_of_overland_flow.pdf</loc>
+		<lastmod>1997-02-21T09:11:50+11:00</lastmod>
+		<priority>0.25</priority>
+	</url>
+</urlset>
