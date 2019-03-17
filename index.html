@@ -54,11 +54,11 @@
 						</div>
 					</div>
 					<ul class="nav flex-column w-100" role="tablist">
-						<li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-						<li class="nav-item"><a class="nav-link" id="papers-tab" data-toggle="pill" href="#papers" role="tab" aria-controls="papers" aria-expanded="true">Publications</a></li>
-						<li class="nav-item"><a class="nav-link" id="photos-tab" data-toggle="pill" href="#photos" role="tab" aria-controls="photos" aria-expanded="true">Photos</a></li>
-						<li class="nav-item"><a class="nav-link" id="resume-tab" data-toggle="pill" href="#resume" role="tab" aria-controls="resume" aria-expanded="true">Resumé</a></li>
-						<li class="nav-item"><a class="nav-link" id="contact-tab" data-toggle="pill" href="#contact" role="tab" aria-controls="contact" aria-expanded="true">Contact</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink active" id="home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="papers-tab" data-toggle="pill" href="#papers" role="tab" aria-controls="papers" aria-expanded="true">Publications</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="photos-tab" data-toggle="pill" href="#photos" role="tab" aria-controls="photos" aria-expanded="true">Photos</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="resume-tab" data-toggle="pill" href="#resume" role="tab" aria-controls="resume" aria-expanded="true">Resumé</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="contact-tab" data-toggle="pill" href="#contact" role="tab" aria-controls="contact" aria-expanded="true">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -488,6 +488,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script>
 		$(document).ready(function() {
+			$('.RFnavlink').click(function() { $('.navbar-collapse').collapse('hide'); });
 			$('#nav-tabsContent a[href^="#"]').click(function(event) {
 				event.preventDefault();
 				$('#nav-tabs a[href="#' + $(this).attr('href').substring(1) + '"]').tab('show')
