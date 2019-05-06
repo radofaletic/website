@@ -2,7 +2,7 @@
 
 version 3.0
 
-This HTML/CSS Bootstrap 4 code is for Rado Faletič’s website, http://RadoFaletic.com/
+This HTML/CSS Bootstrap 4 code is for Rado Faletič’s website, https://RadoFaletic.com/
 
 ### Further information ###
 
