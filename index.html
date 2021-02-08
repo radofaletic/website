@@ -10,27 +10,33 @@
 	<title>Rado Faletič</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<style>
 		body { background: #acbecc url(grey.png) center top repeat fixed; }
 		a:link, a:visited { color: navy; }
 		a:hover { color: teal; }
 		a:active { color: red; text-decoration: underline; }
-		a.url { font-style: italic; }
 		abbr[title] { text-decoration: initial; }
 		.carousel img { max-width: 210px; max-height: 210px; }
 		@media print { abbr::after { display: none; }  }
 	</style>
 </head>
-<body class="p-3">
+<body class="p-3 container-fluid">
 	<div class="row">
 		<div class="col-lg-2 d-print-none">
 			<nav class="nav-pills navbar navbar-expand-lg navbar-light" id="nav-tabs">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navShowHide" aria-controls="navShowHide" aria-expanded="false" aria-label="Toggle menu">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navShowHide" aria-controls="navShowHide" aria-expanded="false" aria-label="Toggle menu">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse flex-column" id="navShowHide">
-					<div class="mb-3 carousel carousel-fade slide w-100" data-ride="carousel" data-keyboard=false data-pause=false>
+				<div class="collapse navbar-collapse flex-column-reverse" id="navShowHide">
+					<ul class="nav flex-column w-100" role="tablist">
+						<li class="nav-item"><a class="nav-link RFnavlink active" id="home-tab" data-bs-toggle="pill" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="papers-tab" data-bs-toggle="pill" href="#papers" role="tab" aria-controls="papers" aria-expanded="true">Publications</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="photos-tab" data-bs-toggle="pill" href="#photos" role="tab" aria-controls="photos" aria-expanded="true">Photos</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="resume-tab" data-bs-toggle="pill" href="#resume" role="tab" aria-controls="resume" aria-expanded="true">Resumé</a></li>
+						<li class="nav-item"><a class="nav-link RFnavlink" id="contact-tab" data-bs-toggle="pill" href="#contact" role="tab" aria-controls="contact" aria-expanded="true">Contact</a></li>
+					</ul>
+					<div class="mb-3 carousel carousel-fade slide w-100" data-bs-ride="carousel" data-bs-keyboard=false data-bs-pause=false>
 						<div class="carousel-inner">
 							<div class="carousel-item active"><img class="d-block w-100 img-fluid mx-auto rounded" src="Rado/Rado_incontact.jpg" alt="Rado at INCONTACT"></div>
 							<div class="carousel-item"><img class="d-block w-100 img-fluid mx-auto rounded" src="Rado/Rado_thermal.jpg" alt="Rado thermal"></div>
@@ -38,329 +44,352 @@
 							<div class="carousel-item"><img class="d-block w-100 img-fluid mx-auto rounded" src="Rado/Rado_sepia.jpg" alt="Rado sepia"></div>
 						</div>
 					</div>
-					<ul class="nav flex-column w-100" role="tablist">
-						<li class="nav-item"><a class="nav-link RFnavlink active" id="home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-						<li class="nav-item"><a class="nav-link RFnavlink" id="papers-tab" data-toggle="pill" href="#papers" role="tab" aria-controls="papers" aria-expanded="true">Publications</a></li>
-						<li class="nav-item"><a class="nav-link RFnavlink" id="photos-tab" data-toggle="pill" href="#photos" role="tab" aria-controls="photos" aria-expanded="true">Photos</a></li>
-						<li class="nav-item"><a class="nav-link RFnavlink" id="resume-tab" data-toggle="pill" href="#resume" role="tab" aria-controls="resume" aria-expanded="true">Resumé</a></li>
-						<li class="nav-item"><a class="nav-link RFnavlink" id="contact-tab" data-toggle="pill" href="#contact" role="tab" aria-controls="contact" aria-expanded="true">Contact</a></li>
-					</ul>
 				</div>
 			</nav>
 		</div>
-		<div class="col-lg-8 col-print">
+		<div class="col-lg-10 col-print">
 			<div class="tab-content" id="nav-tabsContent">
 				<section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<h1 class="text-center mb-5 display-3">Rado’s homepage</h1>
+					<h1 class="text-center mb-5 display-2">Rado’s homepage</h1>
 					<p>I have a <abbr title="Doctor of Philosophy">PhD</abbr> from <a href="https://www.anu.edu.au/">The Australian National University</a>. This project involved developing software for the tomography of shock layer flows. I previously completed a Bachelor of Science with Honours at the <a href="http://rses.anu.edu.au/">Research School of Earth Sciences</a> in seismic tomography.</p>
 					
 					<p>Currently, I am co-founder and Director, Projects &amp; Communications at <a href="https://www.montroix.com/">Montroix Pty Ltd</a> – Australia’s foremost experts in research collaboration with Europe.</p>
 				</section>
 				<section class="tab-pane fade" id="papers" role="tabpanel" aria-labelledby="papers-tab">
-					<h2 class="text-center mb-5 display-3">Rado’s publications</h2>
+					<h2 class="text-center mb-5 display-2">Rado’s publications</h2>
 					<p>You can find me on ORCID at <a href="https://orcid.org/0000-0002-3971-0531">orcid.org/0000-0002-3971-0531</a>.</p>
 					
 					<dl class="row">
 						<dt class="col-1">2020</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. <a href="https://www.montroix.com/publications/2020-06_Capital_raising.html">Capital raising for research in the wake of COVID-19</a>. June 2020.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. <a href="https://www.montroix.com/publications/2020-06_Capital_raising.html">Capital raising for research in the wake of COVID-19</a>. June 2020.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2017</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič &amp; Martin Grabert. <a href="https://youtu.be/JLJL01T6g5w">Plastics in the Ocean and the <abbr title="Sustainable Development Goals">SDGs</abbr></a>. March 2017.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič &amp; Martin Grabert. <a href="https://youtu.be/JLJL01T6g5w">Plastics in the Ocean and the <abbr title="Sustainable Development Goals">SDGs</abbr></a>. March 2017.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2016</dt>
-						<dd class="col-11"><ul>
-							<li><a href="https://pacenet.plus/#policy">Proposal for a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Framework</a>. October 2016.</li>
-							<li>Caroline Moss, Nick Mulhernand, Andrew Cherry, Rado Faletič, Martin Grabert, Cynthia Cripps &amp; Jane Lattimore. <a href="http://plus.pacenet.eu.s3-website-eu-west-1.amazonaws.com/system/files/documents/PNP_D5.1_Brief%20on%20recommendations%20for%20enhanced%20bi-regional%20partnerships_final.pdf">Understanding and promoting <abbr title="Horizon 2020">H2020</abbr> and other <abbr title="European Union">EU</abbr> programmes</a>. September 2016.</li>
-							<li><a href="http://plus.pacenet.eu.s3-website-eu-west-1.amazonaws.com/system/files/documents/PNP%20Towards%20a%20Pacific%20STI%20Agenda%20v4.pdf">Towards a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Agenda: a <abbr title="Pacific-Europe Network for Science, Technology and Innovation">PACE-Net Plus</abbr> recommendation to foster science, technology and innovation (<abbr title="science, technology and innovation">ST&amp;I</abbr>) pathways in the Pacific region</a>. July 2016.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li><a href="https://pacenet.plus/#policy">Proposal for a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Framework</a>. October 2016.</li>
+								<li>Caroline Moss, Nick Mulhernand, Andrew Cherry, Rado Faletič, Martin Grabert, Cynthia Cripps &amp; Jane Lattimore. <a href="http://plus.pacenet.eu.s3-website-eu-west-1.amazonaws.com/system/files/documents/PNP_D5.1_Brief%20on%20recommendations%20for%20enhanced%20bi-regional%20partnerships_final.pdf">Understanding and promoting <abbr title="Horizon 2020">H2020</abbr> and other <abbr title="European Union">EU</abbr> programmes</a>. September 2016.</li>
+								<li><a href="http://plus.pacenet.eu.s3-website-eu-west-1.amazonaws.com/system/files/documents/PNP%20Towards%20a%20Pacific%20STI%20Agenda%20v4.pdf">Towards a Pacific <abbr title="science, technology and innovation">ST&amp;I</abbr> Agenda: a <abbr title="Pacific-Europe Network for Science, Technology and Innovation">PACE-Net Plus</abbr> recommendation to foster science, technology and innovation (<abbr title="science, technology and innovation">ST&amp;I</abbr>) pathways in the Pacific region</a>. July 2016.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2015</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič, Martin Grabert. <a href="https://www.montroix.com/publications/2015-11_Horizon2020_2016-2017.html">Key opportunities for Australian researchers and innovators in the 2016–2017 calls from Horizon 2020</a>. November 2015.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič, Martin Grabert. <a href="https://www.montroix.com/publications/2015-11_Horizon2020_2016-2017.html">Key opportunities for Australian researchers and innovators in the 2016–2017 calls from Horizon 2020</a>. November 2015.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2014</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. <a href="https://www.montroix.com/publications/2014-08_CRC_3_Horizon_2020_howto.html">How CRCs can access Horizon 2020</a>. News from the <abbr title="Cooperative Research Centres">CRC</abbr> Association, August 2014.</li>
-							<li>Rado Faletič. <a href="https://www.montroix.com/publications/2014-05_CRC_2_introducting_Horizon_2020.html">Horizon 2020: the Largest Research Funding Program Ever</a>. News from the <abbr title="Cooperative Research Centres">CRC</abbr> Association, May 2014.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. <a href="https://www.montroix.com/publications/2014-08_CRC_3_Horizon_2020_howto.html">How CRCs can access Horizon 2020</a>. News from the <abbr title="Cooperative Research Centres">CRC</abbr> Association, August 2014.</li>
+								<li>Rado Faletič. <a href="https://www.montroix.com/publications/2014-05_CRC_2_introducting_Horizon_2020.html">Horizon 2020: the Largest Research Funding Program Ever</a>. News from the <abbr title="Cooperative Research Centres">CRC</abbr> Association, May 2014.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2012</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2012-09_Collaboration_is_Critical.pdf">Collaboration is Critical</a>. International Innovation: Health, September 2012.</li>
-							<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2012-08_Joining_the_Dots.pdf">Joining the Dots</a>. International Innovation: Health, August 2012.</li>
-							<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10380"><abbr title="FEAST Extension, Enhancement and Demonstration project">FEED</abbr>: <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Extension, Enhancement and Demonstration project – final report</a>, 29 June 2012.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2012-09_Collaboration_is_Critical.pdf">Collaboration is Critical</a>. International Innovation: Health, September 2012.</li>
+								<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2012-08_Joining_the_Dots.pdf">Joining the Dots</a>. International Innovation: Health, August 2012.</li>
+								<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10380"><abbr title="FEAST Extension, Enhancement and Demonstration project">FEED</abbr>: <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Extension, Enhancement and Demonstration project – final report</a>, 29 June 2012.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2011</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. International Research in <a href="http://www.focus.com.au/past-projects/australian-scientist">Australian scientist: global leaders, international rising stars</a>, 2011.</li>
-							<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2011-07-06_GFC_a_blessing_for_research.pdf">The <abbr title="global financial crisis">GFC</abbr> a blessing for research</a>. The Australian, 6 July 2011.</li>
-							<li>Rado Faletič, Merrilyn Fitzpatrick, Kerrie Glennie, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/1885/10379">From interoperability challenges to syncing opportunities: a pathway to global research</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 7/11, June 2011.</li>
-							<li>Merrilyn Fitzpatrick, Kerrie Glennie, Rado Faletič, Dennis Rank, Christopher T. Hill. <a href="https://hdl.handle.net/1885/10378">The case for interoperability in global research</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 6/11, April 2011.</li>
-							<li>Rado Faletič, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/1885/10377">The Future of <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr></a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 5/11, April 2011.</li>
-							<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10381"><abbr title="Science beYond National Cooperation">SYNC</abbr> – Science beYond National Cooperation</a>. Communiqué from the <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr>/<abbr title="The University of Queensland">UQ</abbr> Symposium: <span class="italic">Enhancing interoperability in the emerging global research order</span>, April 2011.</li>
-							<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10346">Reconciling Quality and Quantity</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 4/11, February 2011.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. International Research in <a href="http://www.focus.com.au/past-projects/australian-scientist">Australian scientist: global leaders, international rising stars</a>, 2011.</li>
+								<li>Rado Faletič. <a href="https://www.montroix.com/feast/publications/2011-07-06_GFC_a_blessing_for_research.pdf">The <abbr title="global financial crisis">GFC</abbr> a blessing for research</a>. The Australian, 6 July 2011.</li>
+								<li>Rado Faletič, Merrilyn Fitzpatrick, Kerrie Glennie, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/1885/10379">From interoperability challenges to syncing opportunities: a pathway to global research</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 7/11, June 2011.</li>
+								<li>Merrilyn Fitzpatrick, Kerrie Glennie, Rado Faletič, Dennis Rank, Christopher T. Hill. <a href="https://hdl.handle.net/1885/10378">The case for interoperability in global research</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 6/11, April 2011.</li>
+								<li>Rado Faletič, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/1885/10377">The Future of <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr></a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 5/11, April 2011.</li>
+								<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10381"><abbr title="Science beYond National Cooperation">SYNC</abbr> – Science beYond National Cooperation</a>. Communiqué from the <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr>/<abbr title="The University of Queensland">UQ</abbr> Symposium: <span class="fst-italic">Enhancing interoperability in the emerging global research order</span>, April 2011.</li>
+								<li>Rado Faletič. <a href="https://hdl.handle.net/1885/10346">Reconciling Quality and Quantity</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 4/11, February 2011.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2010</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/10440/1255">Stocktake of Australian engagement with <abbr title="Seventh Framework Programme">FP7</abbr></a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 3/10, May 2010.</li>
-							<li>Mark Matthews, Rado Faletič. <a href="https://www.aph.gov.au/parliamentary_business/committees/house_of_representatives_committees?url=isi/intresearch/subs/sub73.pdf"><abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr>’s submission to the <span class="italic">Inquiry into Australia’s international research collaboration</span></a>. March 2010.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič, Jean-François Desvignes-Hicks. <a href="https://hdl.handle.net/10440/1255">Stocktake of Australian engagement with <abbr title="Seventh Framework Programme">FP7</abbr></a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 3/10, May 2010.</li>
+								<li>Mark Matthews, Rado Faletič. <a href="https://www.aph.gov.au/parliamentary_business/committees/house_of_representatives_committees?url=isi/intresearch/subs/sub73.pdf"><abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr>’s submission to the <span class="fst-italic">Inquiry into Australia’s international research collaboration</span></a>. March 2010.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2009</dt>
-						<dd class="col-11"><ul>
-							<li>Mark Matthews, Bev Biglia, Kumara Henadeera, Jean-François Desvignes-Hicks, Rado Faletič, Olivia Wenholz. <a href="https://hdl.handle.net/10440/1259">A Bibliometric Analysis of Australia’s International Research Collaboration in Science and Technology: Analytical Methods and Initial Findings</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 1/09, March 2009.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Mark Matthews, Bev Biglia, Kumara Henadeera, Jean-François Desvignes-Hicks, Rado Faletič, Olivia Wenholz. <a href="https://hdl.handle.net/10440/1259">A Bibliometric Analysis of Australia’s International Research Collaboration in Science and Technology: Analytical Methods and Initial Findings</a>. <abbr title="Forum for European-Australian Science and Technology cooperation">FEAST</abbr> Discussion Paper 1/09, March 2009.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2007</dt>
-						<dd class="col-11"><ul>
-							<li>R. Faletič, A. F. P. Houwing, R. R. Boyce. <a href="https://dx.doi.org/10.1007/s00193-007-0098-6">Tomographic reconstruction of shock layer flows</a>. <span class="italic"><a href="https://link.springer.com/journal/193">Shock Waves</a></span>, 17(3), 153–170, doi:10.1007/s00193-007-0098-6, 31 July 2007.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>R. Faletič, A. F. P. Houwing, R. R. Boyce. <a href="https://dx.doi.org/10.1007/s00193-007-0098-6">Tomographic reconstruction of shock layer flows</a>. <span class="fst-italic"><a href="https://link.springer.com/journal/193">Shock Waves</a></span>, 17(3), 153–170, doi:10.1007/s00193-007-0098-6, 31 July 2007.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2005</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. <a href="https://hdl.handle.net/1885/46916">Tomographic reconstruction of shock layers flows</a>. PhD thesis, <a href="https://www.anu.edu.au/">The Australian National University</a>, Canberra, May 2005.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. <a href="https://hdl.handle.net/1885/46916">Tomographic reconstruction of shock layers flows</a>. PhD thesis, <a href="https://www.anu.edu.au/">The Australian National University</a>, Canberra, May 2005.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2003</dt>
-						<dd class="col-11"><ul>
-							<li><a href="http://rses.anu.edu.au/~malcolm/">Malcolm Sambridge</a>, Rado Faletič. <a href="https://doi.org/10.1029/2001GC000213">Adaptive whole Earth tomography</a>. <span class="italic"><a href="https://agupubs.onlinelibrary.wiley.com/journal/15252027">Geochemistry Geophysics Geosystems</a>, 4</span>(3), 1022, doi:10.1029/2001GC000213, 5 March 2003.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li><a href="http://rses.anu.edu.au/~malcolm/">Malcolm Sambridge</a>, Rado Faletič. <a href="https://doi.org/10.1029/2001GC000213">Adaptive whole Earth tomography</a>. <span class="fst-italic"><a href="https://agupubs.onlinelibrary.wiley.com/journal/15252027">Geochemistry Geophysics Geosystems</a>, 4</span>(3), 1022, doi:10.1029/2001GC000213, 5 March 2003.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">2001</dt>
-						<dd class="col-11"><ul>
-							<li>Peter B. Hairsine, Jacky C. Croke, Peter Fogarty, Rado Faletič, Jim Brophy. Early steps in the consideration of spatial variability in runoff connectivity and sediment delivery. <a href="http://soilerosion.net/old/cost623/"><abbr>COST632</abbr> Soil Erosion and Global Change</a>, <a href="http://soilerosion.net/old/cost623/strasbourg_announce3.html">The significance of soil surface characteristics in soil erosion</a>, <a href="http://www-ulp.u-strasbg.fr/">University Louis Pasteur</a>, 20–22 September 2001.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Peter B. Hairsine, Jacky C. Croke, Peter Fogarty, Rado Faletič, Jim Brophy. Early steps in the consideration of spatial variability in runoff connectivity and sediment delivery. <a href="http://soilerosion.net/old/cost623/"><abbr>COST632</abbr> Soil Erosion and Global Change</a>, <a href="http://soilerosion.net/old/cost623/strasbourg_announce3.html">The significance of soil surface characteristics in soil erosion</a>, <a href="http://www-ulp.u-strasbg.fr/">University Louis Pasteur</a>, 20–22 September 2001.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">1999</dt>
-						<dd class="col-11"><ul>
-							<li>A. F. P. Houwing, K. Takayama, K. Koremoto, T. Hashimoto, R. Faletič, M. Gaston. <a href="https://hdl.handle.net/10440/1256">Interferometric measurement of an axi-symmetric density field</a>. Proceedings of the <cite>2<sup>nd</sup> Australian Conference on Laser Diagnostics in Fluid Mechanics and Combustion</cite>, <a href="https://www.monash.edu/">Monash University</a>, 9–10 December 1999.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>A. F. P. Houwing, K. Takayama, K. Koremoto, T. Hashimoto, R. Faletič, M. Gaston. <a href="https://hdl.handle.net/10440/1256">Interferometric measurement of an axi-symmetric density field</a>. Proceedings of the <cite>2<sup>nd</sup> Australian Conference on Laser Diagnostics in Fluid Mechanics and Combustion</cite>, <a href="https://www.monash.edu/">Monash University</a>, 9–10 December 1999.</li>
+							</ul>
+						</dd>
 						
 						<dt class="col-1">1997</dt>
-						<dd class="col-11"><ul>
-							<li>Rado Faletič. <a href="documents/1997-11_Faletic_Seismic_Tomography_honours_thesis.pdf">Seismic Tomography with a Self-adaptive Parameterisation</a>. Honours thesis, <a href="https://www.anu.edu.au/">The Australian National University</a>, Canberra, November 1997.</li>
-							<li>Rado Faletič. <a href="documents/1997-02-21_Faletic_Spatial_patterns_of_overland_flow.pdf">Spatial patterns of overland flow on disturbed hillslopes</a>, Technical Report, <abbr title="Cooperative Research Centre">CRC</abbr> for Catchment Hydrology, 21 February 1997.</li>
-						</ul></dd>
+						<dd class="col-11">
+							<ul>
+								<li>Rado Faletič. <a href="documents/1997-11_Faletic_Seismic_Tomography_honours_thesis.pdf">Seismic Tomography with a Self-adaptive Parameterisation</a>. Honours thesis, <a href="https://www.anu.edu.au/">The Australian National University</a>, Canberra, November 1997.</li>
+								<li>Rado Faletič. <a href="documents/1997-02-21_Faletic_Spatial_patterns_of_overland_flow.pdf">Spatial patterns of overland flow on disturbed hillslopes</a>, Technical Report, <abbr title="Cooperative Research Centre">CRC</abbr> for Catchment Hydrology, 21 February 1997.</li>
+							</ul>
+						</dd>
 					</dl>
 				</section>
 				<section class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
-					<h2 class="text-center mb-5 display-3">Rado’s photos</h2>
+					<h2 class="text-center mb-5 display-2">Rado’s photos</h2>
 					<p>Many of these photographs have been digitally processed/enhanced… just for fun.</p>
 					
-					<div class="card-columns">
+					<div class="row">
 						
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto " src="photos/1994_Magra_sunset.jpg" alt="Magra sunset">
-						<div class="card-body">
-							<p class="card-title text-center">Magra sunset</p>
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto " src="photos/1994_Magra_sunset.jpg" alt="Magra sunset">
+							<div class="card-body">
+								<p class="card-title text-center">Magra sunset</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 1994 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 1994 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 252px;">
-						<img class="card-img-top mx-auto" src="photos/1999-12-21_Narooma.jpg" alt="Narooma">
-						<div class="card-body">
-							<p class="card-title text-center">Narooma</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 252px;">
+							<img class="card-img-top mx-auto" src="photos/1999-12-21_Narooma.jpg" alt="Narooma">
+							<div class="card-body">
+								<p class="card-title text-center">Narooma</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 253px;">
-						<img class="card-img-top mx-auto" src="photos/1999-12-31_Iron_Bridge_on_the_King_River.jpg" alt="Iron Bridge on the King River">
-						<div class="card-body">
-							<p class="card-title text-center">Iron Bridge on the King River</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 253px;">
+							<img class="card-img-top mx-auto" src="photos/1999-12-31_Iron_Bridge_on_the_King_River.jpg" alt="Iron Bridge on the King River">
+							<div class="card-body">
+								<p class="card-title text-center">Iron Bridge on the King River</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 250px;">
-						<img class="card-img-top mx-auto" src="photos/1999-12-31_waterfall_on_King_River.jpg" alt="waterfall on King River">
-						<div class="card-body">
-							<p class="card-title text-center">waterfall on King River</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 250px;">
+							<img class="card-img-top mx-auto" src="photos/1999-12-31_waterfall_on_King_River.jpg" alt="waterfall on King River">
+							<div class="card-body">
+								<p class="card-title text-center">waterfall on King River</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 1999 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto" src="photos/2000_flowers_in_Emu_Ridge.jpg" alt="flowers in Emu Ridge">
-						<div class="card-body">
-							<p class="card-title text-center">flowers in Emu Ridge</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto" src="photos/2000_flowers_in_Emu_Ridge.jpg" alt="flowers in Emu Ridge">
+							<div class="card-body">
+								<p class="card-title text-center">flowers in Emu Ridge</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto" src="photos/2000_Lake_Ginnindera.jpg" alt="Lake Ginnindera">
-						<div class="card-body">
-							<p class="card-title text-center">Lake Ginnindera</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto" src="photos/2000_Lake_Ginnindera.jpg" alt="Lake Ginnindera">
+							<div class="card-body">
+								<p class="card-title text-center">Lake Ginnindera</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto" src="photos/2000_sunset_from_Monaro_Highway.jpg" alt="sunset from Monaro Highway">
-						<div class="card-body">
-							<p class="card-title text-center">sunset from Monaro Highway</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto" src="photos/2000_sunset_from_Monaro_Highway.jpg" alt="sunset from Monaro Highway">
+							<div class="card-body">
+								<p class="card-title text-center">sunset from Monaro Highway</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 246px;">
-						<img class="card-img-top mx-auto" src="photos/2000-04_poplars_by_Lake_Ginninderra.jpg" alt="poplars by Lake Ginninderra">
-						<div class="card-body">
-							<p class="card-title text-center">poplars by Lake Ginninderra</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 246px;">
+							<img class="card-img-top mx-auto" src="photos/2000-04_poplars_by_Lake_Ginninderra.jpg" alt="poplars by Lake Ginninderra">
+							<div class="card-body">
+								<p class="card-title text-center">poplars by Lake Ginninderra</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto" src="photos/2000-06-19_Gold_Coast_morning_fire.jpg" alt="Gold Coast morning fire">
-						<div class="card-body">
-							<p class="card-title text-center">Gold Coast morning fire</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto" src="photos/2000-06-19_Gold_Coast_morning_fire.jpg" alt="Gold Coast morning fire">
+							<div class="card-body">
+								<p class="card-title text-center">Gold Coast morning fire</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 250px;">
-						<img class="card-img-top mx-auto" src="photos/2000-06-19_Surfers_Paradise.jpg" alt="Surfers Paradise">
-						<div class="card-body">
-							<p class="card-title text-center">Surfers Paradise</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 250px;">
+							<img class="card-img-top mx-auto" src="photos/2000-06-19_Surfers_Paradise.jpg" alt="Surfers Paradise">
+							<div class="card-body">
+								<p class="card-title text-center">Surfers Paradise</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 398px;">
-						<img class="card-img-top mx-auto" src="photos/2000-06-20_Gold_Coast_sunrise.jpg" alt="Gold Coast sunrise">
-						<div class="card-body">
-							<p class="card-title text-center">Gold Coast sunrise</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 398px;">
+							<img class="card-img-top mx-auto" src="photos/2000-06-20_Gold_Coast_sunrise.jpg" alt="Gold Coast sunrise">
+							<div class="card-body">
+								<p class="card-title text-center">Gold Coast sunrise</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
-						<img class="card-img-top mx-auto" src="photos/2000-09-10_Jervis_Bay_sunrise.jpg" alt="Jervis Bay sunrise">
-						<div class="card-body">
-							<p class="card-title text-center">Jervis Bay sunrise</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 414px;">
+							<img class="card-img-top mx-auto" src="photos/2000-09-10_Jervis_Bay_sunrise.jpg" alt="Jervis Bay sunrise">
+							<div class="card-body">
+								<p class="card-title text-center">Jervis Bay sunrise</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 434px;">
-						<img class="card-img-top mx-auto" src="photos/2000-12-08_Crookwell_Wind_Farm.jpg" alt="Crookwell Wind Farm">
-						<div class="card-body">
-							<p class="card-title text-center">Crookwell Wind Farm</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 434px;">
+							<img class="card-img-top mx-auto" src="photos/2000-12-08_Crookwell_Wind_Farm.jpg" alt="Crookwell Wind Farm">
+							<div class="card-body">
+								<p class="card-title text-center">Crookwell Wind Farm</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 430px;">
-						<img class="card-img-top mx-auto" src="photos/2000-12-09_along_Grove_Creek.jpg" alt="along Grove Creek">
-						<div class="card-body">
-							<p class="card-title text-center">along Grove Creek</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 430px;">
+							<img class="card-img-top mx-auto" src="photos/2000-12-09_along_Grove_Creek.jpg" alt="along Grove Creek">
+							<div class="card-body">
+								<p class="card-title text-center">along Grove Creek</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2000 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 434px;">
-						<img class="card-img-top mx-auto" src="photos/2001-01-01_New_Millenium_sunrise_from_Mt_Wellington.jpg" alt="New Millenium sunrise from Mt. Wellington">
-						<div class="card-body">
-							<p class="card-title text-center">New Millenium sunrise from Mt. Wellington</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 434px;">
+							<img class="card-img-top mx-auto" src="photos/2001-01-01_New_Millenium_sunrise_from_Mt_Wellington.jpg" alt="New Millenium sunrise from Mt. Wellington">
+							<div class="card-body">
+								<p class="card-title text-center">New Millenium sunrise from Mt. Wellington</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 449px;">
-						<img class="card-img-top mx-auto" src="photos/2001-03_birds_in_Merrimbula.jpg" alt="birds in Merrimbula">
-						<div class="card-body">
-							<p class="card-title text-center">birds in Merrimbula</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 449px;">
+							<img class="card-img-top mx-auto" src="photos/2001-03_birds_in_Merrimbula.jpg" alt="birds in Merrimbula">
+							<div class="card-body">
+								<p class="card-title text-center">birds in Merrimbula</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 420px;">
-						<img class="card-img-top mx-auto" src="photos/2001-05-06_the_pool_playoffs_in_Vincentia.jpg" alt="the pool playoffs in Vincentia">
-						<div class="card-body">
-							<p class="card-title text-center">the pool playoffs in Vincentia</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 420px;">
+							<img class="card-img-top mx-auto" src="photos/2001-05-06_the_pool_playoffs_in_Vincentia.jpg" alt="the pool playoffs in Vincentia">
+							<div class="card-body">
+								<p class="card-title text-center">the pool playoffs in Vincentia</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 274px;">
-						<img class="card-img-top mx-auto" src="photos/2001-06-02_Captain_Cook_Fountain_and_National_Library.jpg" alt="Captain Cook Fountain and National Library">
-						<div class="card-body">
-							<p class="card-title text-center">Captain Cook Fountain and National Library</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 274px;">
+							<img class="card-img-top mx-auto" src="photos/2001-06-02_Captain_Cook_Fountain_and_National_Library.jpg" alt="Captain Cook Fountain and National Library">
+							<div class="card-body">
+								<p class="card-title text-center">Captain Cook Fountain and National Library</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 313px;">
-						<img class="card-img-top mx-auto" src="photos/2001-07_winter_by_Lake_Burley_Griffin.jpg" alt="winter by Lake Burley Griffin">
-						<div class="card-body">
-							<p class="card-title text-center">winter by Lake Burley Griffin</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 313px;">
+							<img class="card-img-top mx-auto" src="photos/2001-07_winter_by_Lake_Burley_Griffin.jpg" alt="winter by Lake Burley Griffin">
+							<div class="card-body">
+								<p class="card-title text-center">winter by Lake Burley Griffin</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 277px;">
-						<img class="card-img-top mx-auto" src="photos/2001-08_Captain_Cook_fountain.jpg" alt="Captain Cook fountain">
-						<div class="card-body">
-							<p class="card-title text-center">Captain Cook fountain</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 277px;">
+							<img class="card-img-top mx-auto" src="photos/2001-08_Captain_Cook_fountain.jpg" alt="Captain Cook fountain">
+							<div class="card-body">
+								<p class="card-title text-center">Captain Cook fountain</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2001 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 447px;">
-						<img class="card-img-top mx-auto" src="photos/2002-02_lavendar_by_Nerang_Pool.jpg" alt="lavendar by Nerang Pool">
-						<div class="card-body">
-							<p class="card-title text-center">lavendar by Nerang Pool</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 447px;">
+							<img class="card-img-top mx-auto" src="photos/2002-02_lavendar_by_Nerang_Pool.jpg" alt="lavendar by Nerang Pool">
+							<div class="card-body">
+								<p class="card-title text-center">lavendar by Nerang Pool</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 246px;">
-						<img class="card-img-top mx-auto" src="photos/2002-03_by_Nerang_Pool.jpg" alt="by Nerang Pool">
-						<div class="card-body">
-							<p class="card-title text-center">by Nerang Pool</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 246px;">
+							<img class="card-img-top mx-auto" src="photos/2002-03_by_Nerang_Pool.jpg" alt="by Nerang Pool">
+							<div class="card-body">
+								<p class="card-title text-center">by Nerang Pool</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 283px;">
-						<img class="card-img-top mx-auto" src="photos/2002-03_sunflower_at_Magra.jpg" alt="sunflower at Magra">
-						<div class="card-body">
-							<p class="card-title text-center">sunflower at Magra</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 283px;">
+							<img class="card-img-top mx-auto" src="photos/2002-03_sunflower_at_Magra.jpg" alt="sunflower at Magra">
+							<div class="card-body">
+								<p class="card-title text-center">sunflower at Magra</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 487px;">
-						<img class="card-img-top mx-auto" src="photos/2002-04_the_National_Carillion.jpg" alt="the National Carillion">
-						<div class="card-body">
-							<p class="card-title text-center">the National Carillion</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 487px;">
+							<img class="card-img-top mx-auto" src="photos/2002-04_the_National_Carillion.jpg" alt="the National Carillion">
+							<div class="card-body">
+								<p class="card-title text-center">the National Carillion</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2002 Rado Faletič</div>
-					</div>
-					
-					<div class="card mx-auto mb-3 shadow" style="max-width: 442px;">
-						<img class="card-img-top mx-auto" src="photos/2003-11_blossom_by_Lake_Ginninderra.jpg" alt="blossom by Lake Ginninderra">
-						<div class="card-body">
-							<p class="card-title text-center">blossom by Lake Ginninderra</p>
+						
+						<div class="card mx-auto mb-3 shadow" style="max-width: 442px;">
+							<img class="card-img-top mx-auto" src="photos/2003-11_blossom_by_Lake_Ginninderra.jpg" alt="blossom by Lake Ginninderra">
+							<div class="card-body">
+								<p class="card-title text-center">blossom by Lake Ginninderra</p>
+							</div>
+							<div class="card-footer text-center text-muted">© 2003 Rado Faletič</div>
 						</div>
-						<div class="card-footer text-center text-muted">© 2003 Rado Faletič</div>
-					</div>
 					
 					</div>
 					
 				</section>
 				<section class="tab-pane fade" id="resume" role="tabpanel" aria-labelledby="resume-tab">
-					<h2 class="text-center mb-5 display-3">Rado’s resumé</h2>
+					<h2 class="text-center mb-5 display-2">Rado’s resumé</h2>
 					<section>
 						<h3>Name</h3>
 						<p>Rado Faletič</p>
@@ -419,7 +448,7 @@
 					</section>
 				</section>
 				<section class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-					<h2 class="text-center mb-5 display-3">Rado’s contact details</h2>
+					<h2 class="text-center mb-5 display-2">Rado’s contact details</h2>
 					<dl class="row">
 						<dt class="col-sm-2">post</dt>
 						<dd class="col-sm-10"><address>Rado Faletič<br>
@@ -428,13 +457,13 @@
 							Hawker  <abbr title="Australian Capital Territory">ACT</abbr>  2614<br>
 							<a href="https://www.australia.com/">Australia</a></address></dd>
 						<dt class="col-sm-2">email:</dt>
-						<dd class="col-sm-10"><a class="url" href="mailto:Rado%20Faletič%20%3Crado.faletic@montroix.com%3E">rado.faletic@montroix.com</a></dd>
+						<dd class="col-sm-10"><a class="fst-italic" href="mailto:Rado%20Faletič%20%3Crado.faletic@montroix.com%3E">rado.faletic@montroix.com</a></dd>
 						<dt class="col-sm-2">LinkedIn:</dt>
-						<dd class="col-sm-10"><a class="url" href="https://www.linkedin.com/in/radofaletic">www.linkedin.com/in/radofaletic</a></dd>
+						<dd class="col-sm-10"><a class="fst-italic" href="https://www.linkedin.com/in/radofaletic">www.linkedin.com/in/radofaletic</a></dd>
 						<dt class="col-sm-2">ORCID:</dt>
-						<dd class="col-sm-10"><a class="url" href="https://orcid.org/0000-0002-3971-0531">orcid.org/0000-0002-3971-0531</a></dd>
+						<dd class="col-sm-10"><a class="fst-italic" href="https://orcid.org/0000-0002-3971-0531">orcid.org/0000-0002-3971-0531</a></dd>
 						<dt class="col-sm-2"><abbr title="World Wide Web">WWW</abbr>:</dt>
-						<dd class="col-sm-10"><a class="url" href="https://radofaletic.com/">RadoFaletic.com</a></dd>
+						<dd class="col-sm-10"><a class="fst-italic" href="https://radofaletic.com/">RadoFaletic.com</a></dd>
 					</dl>
 				</section>
 			</div>
@@ -444,27 +473,26 @@
 	<hr>
 	
 	<footer id="footer" class="text-center py-4">
-		<div class="row">
-			<div class="col-sm order-sm-11 nav justify-content-sm-end d-print-none">
+		<div class="row row-cols-1 row-cols-md-3">
+			<div class="col nav order-first order-md-last justify-content-md-end d-print-none">
 				<a class="nav-link" href="https://www.linkedin.com/in/radofaletic"><svg xmlns="http://www.w3.org/2000/svg" height="2em" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212h-2.4s.03-6.547 0-7.225h2.4v1.023a5.54 5.54 0 0 0-.016.025h.016v-.025c.32-.493.89-1.193 2.165-1.193 1.58 0 2.764 1.033 2.764 3.252v4.143h-2.4V9.529c0-.972-.348-1.634-1.217-1.634-.664 0-1.059.447-1.233.878-.063.154-.079.37-.079.586v4.035z"/></svg></a>
 			</div>
-			<div class="col-sm order-sm-1 nav justify-content-sm-start d-print-none">
+			<div class="col nav order-md-first justify-content-md-start d-print-none">
 				<a class="nav-link" href="https://validator.w3.org/check/referer">
 					<svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><title>HTML5 Logo Badge</title><path fill="currentColor" d="M181.4,208.6H256v-57.9h-79.8L181.4,208.6z M30.4,0l41.1,460.8L255.9,512l184.6-51.2L481.6,0 C481.6,0,30.4,0,30.4,0z M405.3,431.5L256,472.9v-58.6l-0.1,0l-115.8-32.1l-8.1-90.7h56.7l4.2,47.1l62.9,17l0.1,0v-90.3H129.7 L114.5,94.2H256V37.7h184.4L405.3,431.5z"/><path fill="currentColor" opacity="0.8" d="M325.6,265.1H256v90.3l63-17L325.6,265.1z M256,37.7v56.5h141.5l-5.1,56.5H256v57.9h131.3l-15.5,173.5 L256,414.2v58.6l149.3-41.4l35.2-393.8L256,37.7L256,37.7z"/><polygon fill="currentColor" opacity="0.2" points="256,94.2 114.4,94.2 129.7,265.1 256,265.1 256,208.6 181.4,208.6 176.2,150.7 256,150.7"/><polygon fill="currentColor" opacity="0.2" points="256,355.4 255.9,355.4 193,338.4 188.8,291.4 132,291.4 140.1,382.1 255.9,414.2 256,414.2"/></svg>
 					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 220.5 199.5"><title>HTML5 CSS Styling Logo</title><path fill="currentColor" d="M32.8,0L25.4,37.0 176.0,37.0 171.3,60.9 20.6,60.9 13.3,97.9 163.9,97.9 155.5,140.1 94.8,160.2 42.2,140.1 45.8,121.8 8.8,121.8 0,166.2 87.0,199.5 187.3,166.2 200.6,99.4 203.3,86.0 220.4,0z"/></svg>
 					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0.0 0.0 240.2 217.3"><title>HTML5 3D Effects Logo</title><path fill="currentColor" d="M130.2,0L68.5,19.9 202.2,63.2 202.2,148.5 113.1,177.3 37.9,153.0 37.9,69.4 110.6,92.9 172.3,73.0 38.4,29.6 0,42.1 0,180.6 113.1,217.2 240.2,176.1 240.2,35.5z"/></svg>
 					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256.155 256.155"><title>HTML5 Semantics Logo</title><polygon id="chevron" fill="currentColor" points="128.106,0 0,64.744 0,107.32 128.106,42.577 256.155,107.32 256.155,64.744"/><use xlink:href="#chevron" y="74.316" /><use xlink:href="#chevron" y="148.653" /></svg></a>
 			</div>
-			<div class="col-lg order-sm-12 order-lg-6 nav justify-content-sm-center">
+			<div class="col nav order-last order-md-3 justify-content-md-center">
 				<p class="nav-link">© Rado Faletič, 1998–2021.</p>
 			</div>
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 	<script>
 		$(document).ready(function() {
-			$('.RFnavlink').click(function() { $('.navbar-collapse').collapse('hide'); });
 			$('#nav-tabsContent a[href^="#"]').click(function(event) {
 				event.preventDefault();
 				$('#nav-tabs a[href="#' + $(this).attr('href').substring(1) + '"]').tab('show')

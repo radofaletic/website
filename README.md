@@ -1,8 +1,8 @@
 # README #
 
-version 3.0
+version 3.1
 
-This HTML/CSS Bootstrap 4 code is for Rado Faletič’s website, https://RadoFaletic.com/
+This HTML/CSS Bootstrap 5 code is for Rado Faletič’s website, https://RadoFaletic.com/
 
 ### Further information ###
 
